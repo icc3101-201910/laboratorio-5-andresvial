@@ -10,6 +10,7 @@ namespace Lab5
     {
         static void Main(string[] args)
         {
+            //Instancio todas las calculdoras
             PersonaQueSuma5 pqs5 = new PersonaQueSuma5();
             RobotFibonacci rf = new RobotFibonacci();
             PerroFactorial pf = new PerroFactorial();
@@ -18,6 +19,8 @@ namespace Lab5
 
             Console.WriteLine("Ingrese numero");
             int numero = int.Parse(Console.ReadLine());
+
+            //Instancio Calculadora y agrego las calculadoras a la lista
             Calculadora cal = new Calculadora(numero);
             cal.calculadoras.Add(pqs5);
             cal.calculadoras.Add(rf);
@@ -40,30 +43,35 @@ namespace Lab5
                 int opcion = int.Parse(Console.ReadLine());
                 Console.WriteLine("");
 
+                //Sumar 5
                 if (opcion == 1)
                 {
                     cal.Calcular(opcion);
                     Console.WriteLine(cal.GetNumero());
                 }
 
+                //Fibonacci
                 else if (opcion == 2)
                 {
                     cal.Calcular(opcion);
                     Console.WriteLine(cal.GetNumero());
                 }
 
+                //Factorial
                 else if (opcion == 3)
                 {
                     cal.Calcular(opcion);
                     Console.WriteLine(cal.GetNumero());
                 }
 
+                //Cubo
                 else if (opcion == 4)
                 {
                     cal.Calcular(opcion);
                     Console.WriteLine(cal.GetNumero());
                 }
 
+                //Cuadrado
                 else if (opcion == 5)
                 {
                     cal.Calcular(opcion);
